@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="keywords" content="hexo,个人博客,blog" />
+  <meta name="description" content="藤子的个人博客" />
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
+  <link rel="dns-prefetch" href="https://at.alicdn.com">
+  
+  <link rel="dns-prefetch" href="https://widget.daovoice.io">
+  <link rel="dns-prefetch" href="https://widget-static-cdn.daovoice.io">
+  <link rel="dns-prefetch" href="https://im.daovoice.io">
+  
+  
+  <link rel="dns-prefetch" href="https://hm.baidu.com/">
+  
+  
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="https://api.github.com">
+  <link rel="dns-prefetch" href="https://avatars3.githubusercontent.com">
+  
+  <link rel="stylesheet" type="text/css" href="/./style/main.css">
+	<link rel="shortcut icon" href="/favicon.ico" title="Favicon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+	<title>Linux常用命令</title>
+  
+  <script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?awwssw1snsnsnn1ndndnndnd99j";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();
+  </script>
+  
+  
+    <script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/123456.js","daovoice");daovoice('init',{app_id: "123456"});daovoice('update');
+  </script>
+  
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+  <canvas id="pattern-placeholder" height="230"></canvas>
+<div class="navbar-header">
+  <a class="blog-title" href="/">TZ</a>
+  <a class="face-img" href="/">
+    <img src="/img/auther.jpg">
+  </a>
+</div>
+<main>
+  <div class="article-title">
+    
+  
+  <h1 class="title">
+    Linux常用命令
+  </h1>
+  
+
+
+    <ul class="article-info">
+      <li>
+        发布
+        <time datetime="2020-05-10T12:46:59.000Z" itemprop="datePublished">2020-05-10</time>
+      </li>
+      <li>
+        
+    更新 <time datetime="2020-05-23T07:11:27.754Z" itemprop="dateUpdated">2020-05-23</time>
+
+      </li>
+      <li id="busuanzi_container_page_pv">
+        阅读 <span id="busuanzi_value_page_pv"></span>
+      </li>
+    </ul>
+  </div>
+  <div class="container">
+    <div class="article">
+      <div class="content">
+        
+        <h4 id="一、常用的系统工作命令"><a href="#一、常用的系统工作命令" class="headerlink" title="一、常用的系统工作命令"></a>一、常用的系统工作命令</h4><p>1.echo 命令</p>
+<ul>
+<li>echo命令用于在终端输出字符串货变量提取后的值，格式为<code>echo [字符串 | $变量]</code></li>
+</ul>
+<p>2.date 命令</p>
+<ul>
+<li><p>date命令用于显示及设置系统时间或日期，格式为<code>date[选项]\[+指定格式]</code></p>
+</li>
+<li><p><code>date -s “20170901 8：30：00“</code>修改系统时间</p>
+</li>
+<li><p><code>date ”+%j“</code> 查看今天是今年的第几天。</p>
+</li>
+</ul>
+<p><img src="%5Ctypora-user-images%5C1589704387092.png" alt="1589704387092"></p>
+<p>3.roboot 命令</p>
+<ul>
+<li>reboot命令用于重启系统，一般只有root权限才可以</li>
+</ul>
+<p>4.poweroff 命令</p>
+<ul>
+<li>poweroff命令用于关闭系统，一般只有root权限才可以</li>
+</ul>
+<p>5.wget命令</p>
+<ul>
+<li><p>wget命令用于在终端中下载网络文件，格式为<code>wget[参数]下载地址</code></p>
+<p><img src="%5Ctypora-user-images%5C1589705090076.png" alt="1589705090076"></p>
+</li>
+</ul>
+<p>6.ps 命令</p>
+<ul>
+<li><p>ps命令用于查看系统中的进程状态，格式为<code>ps[参数]</code>，可简写为<code>ps aux</code></p>
+<p><img src="%5Ctypora-user-images%5C1589706520349.png" alt="1589706520349"></p>
+</li>
+<li><p>5种常见状态</p>
+<ul>
+<li><p>R（运行）：进程正在运行或在运行队列中等待。 </p>
+</li>
+<li><p>S（中断）：进程处于休眠中，当某个条件形成后或者接收到信号时，则脱离该  </p>
+</li>
+</ul>
+<p>状态。 </p>
+<ul>
+<li><p>D（不可中断）：进程不响应系统异步信号，即便用 kill 命令也不能将其中断。 </p>
+</li>
+<li><p>Z（僵死）：进程已经终止，但进程描述符依然存在, 直到父进程调用 wait4()系统函数 </p>
+</li>
+</ul>
+<p>后将进程释放。 </p>
+<ul>
+<li>T（停止）：进程收到停止信号后停止运行。</li>
+</ul>
+<p><img src="%5Ctypora-user-images%5C1589707550086.png" alt="1589707550086"></p>
+</li>
+</ul>
+<p>7.top命令</p>
+<ul>
+<li>top命令用于动态地监视进程活动于系统负载等信息，</li>
+</ul>
+<p>格式为<code>top</code>,相当于强化版Windows任务管理器</p>
+<ul>
+<li>第 1 行：系统时间、运行时间、登录终端数、系统负载（三个数值分别为 1 分钟、5 </li>
+</ul>
+<p>分钟、15 分钟内的平均值，数值越小意味着负载越低）。 </p>
+<ul>
+<li>第 2 行：进程总数、运行中的进程数、睡眠中的进程数、停止的进程数、僵死的进程 </li>
+</ul>
+<p>数。 </p>
+<ul>
+<li>第 3 行：用户占用资源百分比、系统内核占用资源百分比、改变过优先级的进程资源 </li>
+</ul>
+<p>的 CPU 处理器资源处于空闲。</p>
+<p>百分比、空闲的资源百分比等。 </p>
+<ul>
+<li>第 4 行：物理内存总量、内存使用量、内存空闲量、作为内核缓存的内存量。 </li>
+<li>第 5 行：虚拟内存总量、虚拟内存使用量、虚拟内存空闲量、已被提前加载的内存量。</li>
+</ul>
+<blockquote>
+<p>第 3 行中的数据均为 CPU 数据并以百分比格式显示，例如“97.1 id”意味着有 97.1% </p>
+</blockquote>
+<p>8.pidof命令</p>
+<ul>
+<li>pidof命令用于查询某个指定服进程的PID值，格式为<code>pidof[参数][服务名称]</code>，可以理解为端口</li>
+</ul>
+<p>9.kill命令</p>
+<ul>
+<li>kill命令用于终止某个指定的PID的服务进程，格式为<code>kill[参数]\[进程 PID]</code></li>
+</ul>
+<p>10.killall命令</p>
+<ul>
+<li>killall命令用于终止某个指定名称的服务所对应的全部进程，格式为<code>killall[参数][进程名称]</code></li>
+</ul>
+<h4 id="二、系统状态检测命令"><a href="#二、系统状态检测命令" class="headerlink" title="二、系统状态检测命令"></a>二、系统状态检测命令</h4><p>1.ifconfig命令</p>
+<ul>
+<li>ifconfig 命令用于获取网卡配置和网络状态等信息，格式为<code>ifconfig[网络设备][参数]</code></li>
+</ul>
+<p>2.unname 命令</p>
+<ul>
+<li><p>uname 命令用于查看系统内核与系统版本信息，格式为<code>uname -a</code></p>
+</li>
+<li><p>查看当前版本详细信息，则要查看redhat-release文件，</p>
+<p><code>cat /etc/redhat-release</code></p>
+</li>
+</ul>
+<p>3.uptime命令</p>
+<ul>
+<li>uptime用于查看系统负载信息，格式为uptime</li>
+</ul>
+<p>4.free命令</p>
+<ul>
+<li><p>用于现实当前系统中内存的使用量信息，格式为<code>free -h</code></p>
+<p><img src="%5Ctypora-user-images%5C1590192717658.png" alt="1590192717658"></p>
+</li>
+</ul>
+<p>5.who命令</p>
+<ul>
+<li>who用于产看当前登入主机的用户终端信息，格式为<code>who[参数]</code></li>
+</ul>
+<p><img src="%5Ctypora-user-images%5C1590192984441.png" alt="1590192984441"></p>
+<p>6.last 命令</p>
+<ul>
+<li>last命令用于查看所有系统登录记录，格式为<code>last[参数]</code></li>
+</ul>
+<p>7.history命令</p>
+<ul>
+<li><p>history用于查看显示历史执行过的命令，格式为<code>history [-c]</code>  ，-c参数是clean意思</p>
+</li>
+<li><p>系统定义是查看1000条，自定义在/etc/profile文件中的HISTSIZE变量值</p>
+</li>
+<li><p><code>!数字编码</code>用于重复执行某次命令</p>
+</li>
+</ul>
+<blockquote>
+<p>历史命令保存在.bash_history文件中。Linux中(.)开头的文件均代表隐藏文件，这些文件大多数为系统服务文件，可以用cat命令来查看文件内容</p>
+</blockquote>
+<p>8.sosreprort</p>
+<ul>
+<li>sosreprot命令用于收集系统配置及架构信息并输出诊断文档，格式为<code>sosreport</code></li>
+</ul>
+<h4 id="三、工作目录切换命令"><a href="#三、工作目录切换命令" class="headerlink" title="三、工作目录切换命令"></a>三、工作目录切换命令</h4><p>1.pwd 命令</p>
+<ul>
+<li>用于显示用户当前所处的工作目录，格式为<code>pwd [选项]</code></li>
+</ul>
+<p>2.cd命令</p>
+<ul>
+<li>cd命令用于切换工作路径，格式为<code>cd[目录名称]</code></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>常用方法</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>cd -</td>
+<td>返回到上一次所处的目录</td>
+</tr>
+<tr>
+<td>cd ..</td>
+<td>命令进入上级目录</td>
+</tr>
+<tr>
+<td>cd ~</td>
+<td>切换到当前用户的家目录</td>
+</tr>
+<tr>
+<td>cd ~username</td>
+<td>切换到其他用户的家目录</td>
+</tr>
+</tbody></table>
+<p>3.ls命令</p>
+<ul>
+<li><p>ls 命令用于显示目录中的文件信息，格式为<code>ls[选项][文件]</code></p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-a</td>
+<td>查看当前目录全部文件（包括隐藏文件）</td>
+</tr>
+<tr>
+<td>-l</td>
+<td>查看当前目录文件的属性、大小等详细信息</td>
+</tr>
+<tr>
+<td>-al</td>
+<td>即可查看当前目录中的所有文件并输出这些文件的属</td>
+</tr>
+<tr>
+<td>-d</td>
+<td>要查看目录的权限与属性信息，<code>ls -ld /etc</code></td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h4 id="四、文本文件编辑命令"><a href="#四、文本文件编辑命令" class="headerlink" title="四、文本文件编辑命令"></a>四、文本文件编辑命令</h4><p>1.cat命令</p>
+<ul>
+<li><p>cat 命令用于查看纯文本文件（内容较少的），格式为<code>cat[选项][文件]</code></p>
+</li>
+<li><p>-n 参数用于显示行号</p>
+</li>
+</ul>
+<p>2.more 命令</p>
+<ul>
+<li>more 命令用于查看纯文本文件（内容较多的），格式为<code>more[选项]文件</code></li>
+</ul>
+<p>3.head命令</p>
+<ul>
+<li>head 命令用于查看纯文本文档的前 N 行，格式为<code>head[选项][文件]</code></li>
+</ul>
+<p>4.tail</p>
+<ul>
+<li><p>tail 命令用于查看纯文本文档的后 N 行或持续刷新内容，格式为<code>tail[选项][文件]</code>。</p>
+<table>
+<thead>
+<tr>
+<th>常用命令方式</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>tail -n 20</td>
+<td></td>
+</tr>
+<tr>
+<td>tail -f</td>
+<td>实时查看最新日志文件时</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p>5.tr命令</p>
+<ul>
+<li>tr 命令用于替换文本文件中的字符，格式为<code>tr[原始字符][目标字符]</code></li>
+</ul>
+<p>6.wc命令</p>
+<ul>
+<li><p>wc 命令用于统计指定文本的行数、字数、字节数，格式为<code>wc [参数] 文本</code></p>
+<p><img src="%5Ctypora-user-images%5C1590201002301.png" alt="1590201002301"></p>
+</li>
+</ul>
+<blockquote>
+<p>在 Linux 系统中，passwd 是用于保存系统账户信息的文件，要统计当前系统中有多少个用户,可以使用下面的命令来进行查询 <code>wc -l /etc/passwd</code></p>
+</blockquote>
+<p>7.stat命令</p>
+<ul>
+<li>stat命令用于查看文件的具体储存信息和时间等信息，格式为<code>stat 文件名称</code></li>
+</ul>
+<p>8.cut 命令</p>
+<ul>
+<li>cut 命令用于按“列”提取文本字符，格式为<code>cut[参数]文本</code>。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-f</td>
+<td>设置需要看的列数</td>
+</tr>
+<tr>
+<td>-d[间隔符号]</td>
+<td>设置间隔符号（提取间隔符左边内容）</td>
+</tr>
+</tbody></table>
+<p>9.diff 命令</p>
+<ul>
+<li>diff 命令用于比较多个文本文件的差异，格式为<code>diff[参数]文件</code>。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>–brief</td>
+<td>确认两个文件是否不同</td>
+</tr>
+<tr>
+<td>-c</td>
+<td>详细比较出多个文件的差异之处</td>
+</tr>
+</tbody></table>
+<h4 id="五、文件目录管理命令"><a href="#五、文件目录管理命令" class="headerlink" title="五、文件目录管理命令"></a>五、文件目录管理命令</h4><p>1.touch命令</p>
+<ul>
+<li>touch 命令用于创建空白文件或设置文件的时间，格式为<code>touch [选项] [文件]</code>。</li>
+</ul>
+<p><img src="%5Ctypora-user-images%5C1590205182279.png" alt="1590205182279"></p>
+<blockquote>
+<p>先使用 ls 命令查看一个文件的修改时间，然后修改这个文件，最后再通过 touch </p>
+<p>命令把修改后的文件时间设置成修改之间的时间（很多黑客就是这样做的呢）：</p>
+<p>`[root@linuxprobe ~]# ls -l anaconda-ks.cfg  </p>
+<p>-rw——-. 1 root root 1213 <strong>May 4 15:44</strong> anaconda-ks.cfg  </p>
+<p>[root@linuxprobe ~]# echo “Visit the LinuxProbe.com to learn linux skills” &gt;&gt;  </p>
+<p>anaconda-ks.cfg  </p>
+<p>[root@linuxprobe ~]# ls -l anaconda-ks.cfg  </p>
+<p>-rw——-. 1 root root 1260 <strong>Aug 2 01:26</strong> anaconda-ks.cfg  </p>
+<p>[root@linuxprobe ~]# touch -d “2017-05-04 15:44” anaconda-ks.cfg  </p>
+<p>[root@linuxprobe ~]# ls -l anaconda-ks.cfg  </p>
+<p>-rw——-. 1 root root 1260 <strong>May 4 15:44</strong> anaconda-ks.cfg `</p>
+</blockquote>
+<p>2.mkdir 命令</p>
+<ul>
+<li><p>mkdir 命令用于创建空白的目录，格式为<code>mkdir [选项] 目录</code>。</p>
+</li>
+<li><p>mkidr -p  递归创建出具有嵌套叠层关系的文件目录</p>
+</li>
+</ul>
+<p>3.cp命令</p>
+<ul>
+<li>cp命令用于复制文件或目录，格式为<code>cp [选项] 源文件 目标文件</code>。</li>
+</ul>
+<blockquote>
+<p>1.如果目标文件是目录，则会把源文件复制到该目录中；</p>
+<p>2.如果目标文件也是普通文件，则会询问是否要覆盖它；</p>
+<p>3.如果目标文件不存在，则执行正常的复制操作。</p>
+</blockquote>
+<p><img src="%5Ctypora-user-images%5C1590206199516.png" alt="1590206199516"></p>
+<p>4.mv 命令</p>
+<ul>
+<li>mv 命令用于剪切文件或将文件重命名，格式为<code>mv [选项] 源文件 [目标路径|目标文件名]</code>。</li>
+</ul>
+<p>5.rm命令</p>
+<ul>
+<li><p>rm 命令用于删除文件或目录，格式为<code>rm [选项] 文件</code>。</p>
+</li>
+<li><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>rm -f</td>
+<td>强制删除</td>
+</tr>
+<tr>
+<td>rm -r</td>
+<td>用于删除目录</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<blockquote>
+<p>rm -rf 强制删除目录，就是不会询问。</p>
+<p>linux 中命令都是可以直接组合的</p>
+</blockquote>
+<p>6.dd命令</p>
+<ul>
+<li>dd 命令用于按照指定大小和个数的数据块来复制文件或转换文件，格式<code>dd [参数]</code>。</li>
+</ul>
+<p><img src="%5Ctypora-user-images%5C1590215251514.png" alt="1590215251514"></p>
+<p>7.file 命令</p>
+<ul>
+<li>file 命令用于查看文件的类型，格式为<code>file 文件名</code></li>
+</ul>
+<h4 id="六、打包压缩与搜索命令"><a href="#六、打包压缩与搜索命令" class="headerlink" title="六、打包压缩与搜索命令"></a>六、打包压缩与搜索命令</h4><p>1.tar 命令</p>
+<ul>
+<li>tar 命令用于对文件进行打包压缩或解压，格式为<code>tar [选项] [文件]</code>。</li>
+</ul>
+<p><img src="%5Ctypora-user-images%5C1590215764161.png" alt="1590215764161"></p>
+<blockquote>
+<p>1.-c 参数用于创建压缩文件，-x 参数用于解压文件，因此这两个参数不能同时使用。</p>
+<p>2.-f 参数特别重要，它必须放到参数的最后一位，代表要压缩或解压的软件包名称。</p>
+</blockquote>
+<p>2.grep命令</p>
+<ul>
+<li>grep 命令用于在文本中执行关键词搜索，并显示匹配的结果，格式为<code>grep [选项] [文件]</code>。</li>
+</ul>
+<p><img src="%5Ctypora-user-images%5C1590216035852.png" alt="1590216035852"></p>
+<p>3.find 命令</p>
+<ul>
+<li>find 命令用于按照指定条件来查找文件，格式为<code>find [查找路径] 寻找条件 操作</code>。</li>
+</ul>
+<p><img src="%5Ctypora-user-images%5C1590216248564.png" alt="1590216248564"></p>
+<blockquote>
+<p>进阶实验：在整个文件系统中找出所有归属于 linuxprobe 用户的文件并复制到 /root/findresults 目录。 </p>
+<p>该实验的重点是“-exec {} ;”参数，其中的{}表示 find 命令搜索出的每一个文 件，并且命令的结尾必须是“;”。完成该实验的具体命令如下： </p>
+<p>[root@linuxprobe ~]# find / -user linuxprobe -exec cp -a {} /root/findresults/ ; </p>
+</blockquote>
+
+      </div>
+        <div class="support-author">
+          <p>感谢您的阅读。 🙏
+          <a href="https://888.com/index.html" target="_blank">关于转载请看这里</a>
+            <!--<a class="btn-pay"  href="#pay-modal">¥ 打赏支持</a>-->
+          </p>
+        </div>
+        <!--
+            <div class="like ">
+              <div class="like-button">
+                <a id="like-note" href="">
+                  <i class="icon-heart"></i>喜欢
+                </a>
+              </div>
+              <span id="likes-count">256</span>
+            </div>
+        -->
+        <div class="otherLink">
+          <div class="previous">
+          </div>
+          <div class="next">
+          </div>
+        </div>
+        <div class="comments" id="comments">
+          
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+  const gitalk = new Gitalk({
+    clientID: '8888a8888',
+    clientSecret: '8888886666666',
+    repo: 'xxxx.github.io',
+    owner: 'admin',
+    admin: ['admin'],
+    id: location.pathname,      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false
+  })
+
+  gitalk.render('comments');
+</script>
+
+
+        </div>
+      </div>
+    </div>
+   </div>
+</main>
+<div class="footer">
+  <div class="info">
+    <p>
+    <a href="https://hexo.io" target="_blank" rel="noopener"> Hexo </a> 强力驱动 |
+      <a href="https://github.com/Youthink/hexo-themes-yearn" target="_blank" rel="noopener"> Yearn </a>
+      主题
+    </p>
+    <p>&copy;2013-2018 某某的博客 京ICP备xxxxxx号</p>
+  </div>
+</div>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<script>//console
+  var consoleConfig = '\n欢迎访问 https://hufangyun.com ，围观藤子的博客(づ｡◕‿‿◕｡)づ！\n,https://static.hufangyun.com/blog-url-qrcode-180-180.png'.split(',');
+  var canConsole = true;
+  var consoleInfo = (function(consoleConfig) {
+  if (!canConsole || !consoleConfig || consoleConfig.length < 1) {
+    return;
+  }
+  var consoleColor = '#6190e8';
+  var _console;
+  var backgroundTextStyle = 'padding: 1px 5px;color: #fff;background: ' + consoleColor + ';'
+  var textStyle = 'color: ' + consoleColor + ';';
+
+  consoleConfig.map(o => {
+    var num = (o.match(/%c/g) || []).length;
+    if(/^http(s)?:\/\//.test(o)) {
+      console.log('%c     ', 'background: url(' + o + ') no-repeat left center;font-size: 180px;');
+      return;
+    }
+    if (num > 0) {
+      var logArguments = [];
+      for (var i = 0; i < num; i++) {
+        if (i % 2 === 0) {
+          logArguments.push(backgroundTextStyle);
+        } else {
+          logArguments.push(textStyle);
+        }
+      }
+      (_console = console).log.apply(_console, ['%c' + o, textStyle].concat(logArguments));
+      return;
+    }
+    console.log('%c' + o, textStyle);
+  });
+}(consoleConfig));</script><script type="text/javascript" src="/./js/main.js"></script>
+
+  <script src="//at.alicdn.com/t/font_159214_mvtxvg9me9.js"></script>
+</body>
+</html>
